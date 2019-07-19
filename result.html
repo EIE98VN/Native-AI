@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        .logo-img {
+            width: 160px;
+            height: 40px;
+        }
+        
+        .header-logo {
+            color: #DBAC69;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+        
+        .font-result-review-layout {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .font-result-review {
+            margin: 10px 0px 10px 0px;
+        }
+        
+        .font-result-detail {
+            font-size: 12px;
+        }
+        
+        .line {
+            width: 500px;
+            height: 0px;
+            border-bottom: 1px solid black;
+        }
+        
+        .row-head {
+            background-color: #DBAC69;
+            color: white;
+        }
+        
+        #btn-redo {
+            color: white;
+            background-color: #68C52E;
+            border-color: #5CAD2A;
+        }
+        
+        fieldset {
+            border-width: 2px;
+            border-style: solid;
+            border-color: #68C52E;
+            padding: 0px 20px 10px 20px;
+            border-radius: 10px;
+        }
+        
+        legend {
+            width: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="row" style="padding-top: 15px">
+            <div class="col-md-4 header-logo " style="text-align: center ">
+                <i class="fas fa-arrow-left "></i>
+                <img src="./resource/image/native-gen5-white.png " class="logo-img " alt="logo ">
+                <pre style="display: inline; color: magenta "> | </pre> Native AI Test
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2 text-center">
+                <fieldset>
+                    <legend style="font-size:13px; font-weight: bold; color: #C4C4C4;">Thời gian học</legend>
+                    <div id="timer" style="font-size: 20px; font-weight: bold">00 : 00 : 00</div>
+                </fieldset>
+            </div>
+        </div>
+    </header>
+
+    <div class="content" style="margin-top:60px">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-2">
+                <div style="padding-top:20px; ">
+                    <img src=" ./resource/image/teacher.png " alt="teacher-logo " class="icon-teacher ">
+                </div>
+            </div>
+            <div class="col-md-4 font-result-review-layout">
+
+                <div class="font-result-review">
+                    <span>Your score is: 5/20</span>
+                    <span style="padding-left: 20px">5 <i style="color: #00AAFF" class="fas fa-check-square"></i></span>
+                    <span style="padding-left: 20px">15 <i style="color: #F6391F"
+                            class="fas fa-minus-square"></i></span>
+                </div>
+                <div class="font-result-review">Your result is not good, but don't worry, let's practice more, it will be better</div>
+                <div class="line"></div>
+                <div style="font-size: 12px; margin: 15px 0px">Chi tiết bài test của bạn</div>
+
+                <!-- table -->
+                <table class="table font-result-detail">
+                    <thead>
+                        <tr class="row-head">
+                            <th>Question number</th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>the ball is near the pool</td>
+                            <td>my name is mine</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>the ball is near the pool</td>
+                            <td>my name is mine</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>the ball is near the pool</td>
+                            <td>my name is mine</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>the ball is near the pool</td>
+                            <td>my name is mine</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table font-result-detail">
+                    <thead>
+                        <tr class="row-head">
+                            <th>Question number</th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3</td>
+                            <td>the ball is near the pool</td>
+                            <td>my name is mine</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>the ball is near the pool</td>
+                            <td>my name is mine</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>the ball is near the pool</td>
+                            <td>my name is mine</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>the ball is near the pool</td>
+                            <td>my name is mine</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn" id="btn-redo">Làm lại bài test <i style="font-size:11px"
+                        class="fas fa-arrow-right arrow"></i></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var string_url = window.location.href;
+        var url = new URL(string_url);
+        var hours = url.searchParams.get("h");
+        var minutes = url.searchParams.get("m");
+        var seconds = url.searchParams.get("s");
+        if (hours < 10) hourText = "0" + hours;
+        if (minutes < 10) minText = "0" + minutes;
+        if (seconds < 10) secText = "0" + seconds;
+        timeContext = hourText + " : " + minText + " : " + secText;
+        document.getElementById("timer").textContent = timeContext;
+    </script>
+</body>
+
+</html>

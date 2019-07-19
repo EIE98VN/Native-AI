@@ -1,0 +1,60 @@
+.btn-main {
+    font-size: 11px;
+    font-weight: bolder;
+}
+
+h6.hidden {
+    display: none
+}
+
+.font-topic-des {
+    font-size: 13px;
+}
+
+.card:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+.btn-study {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    background: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+div.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.card:hover .btn-study {
+    border-color: #dbac69;
+}
+
+div #study {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.header-info {
+    font-size: 13px;
+    color: #AAAAAA;
+}
+
+.footer-info {
+    font-size: 13px;
+    color: #DBAC69;
+}
+
+.ul-info {
+    list-style-type: none;
+}
+
+.ul-info li::before {
+    content: '-';
+}
+
+.icon-teacher {
+    width: 160px;
+}

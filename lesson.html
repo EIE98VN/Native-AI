@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./resource/css/circle.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        
+        .container {
+            margin-left: 10px;
+        }
+        
+        .div.center {
+            text-align: center;
+        }
+        
+        .logo-img {
+            width: 160px;
+            height: 40px;
+        }
+        
+        container {
+            margin: auto;
+        }
+        
+        .header-logo {
+            color: #DBAC69;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+        
+        .timer {
+            text-align: center;
+        }
+        
+        row {
+            padding-top: 30px;
+        }
+        
+        .question {
+            font-weight: bold;
+        }
+        
+        .question-des {
+            font-style: italic;
+            font-size: 15px;
+        }
+        
+        .option {
+            margin: 10px auto 10px auto;
+            padding: auto;
+            width: 500px;
+            border-color: #C4C4C4;
+            border-width: 3px;
+            border-radius: 15px !important;
+            height: 50px;
+        }
+        
+        .list-group-item:hover {
+            background-color: #00AAFF;
+            border-color: #008FD7;
+        }
+        
+        .progress-wrapper {
+            width: 100%;
+            height: 10px;
+            position: relative;
+            display: inline-block;
+            overflow: visible;
+        }
+        
+        .progress-bar {
+            background-color: #DBAC69;
+        }
+        
+        .progress-wrapper .tooltip-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%;
+            display: table;
+            transition: .6s ease;
+            margin-left: 0px;
+        }
+        
+        .progress-wrapper .tooltip-box::after {
+            content: " ";
+            position: absolute;
+            top: 98%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #dbac69 transparent transparent transparent;
+        }
+        
+        .tooltip-text {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #DBAC69;
+        }
+        
+        .progress-proceed {
+            width: 0px;
+            height: 10px;
+        }
+        
+        button {
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 15px 10px 15px 10px;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 10px;
+            width: 120px;
+            height: 40px;
+        }
+        
+        #btn-previous {
+            background-color: #E5E5E5;
+            color: #999999;
+            border-color: #C4C4C4;
+        }
+        
+        #btn-next {
+            color: white;
+            background-color: #68C52E;
+            border-color: #5CAD2A;
+        }
+        
+        .arrow {
+            font-size: 11px;
+        }
+        
+        fieldset {
+            border-width: 2px;
+            border-style: solid;
+            border-color: #68C52E;
+            padding: 0px 20px 10px 20px;
+            border-radius: 10px;
+        }
+        
+        legend {
+            width: inherit;
+        }
+        
+        .choose-option {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="row" style="padding-top: 15px">
+            <div class="col-md-4 header-logo " style="text-align: center ">
+                <i class="fas fa-arrow-left "></i>
+                <img src="./resource/image/native-gen5-white.png " class="logo-img " alt="logo ">
+                <pre style="display: inline; color: magenta "> | </pre> Native AI Test
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2 text-center">
+                <fieldset>
+                    <legend style="font-size:13px; font-weight: bold; color: #C4C4C4;">Thời gian học</legend>
+                    <div id="timer" style="font-size: 20px; font-weight: bold">00 : 00 : 00</div>
+                </fieldset>
+            </div>
+        </div>
+    </header>
+    <div class="content" style="margin-top:60px">
+        <div class="text-center">
+            <div class="question">Choose the best word to complete the questions</div>
+            <div class="question-des">(Chọn đáp án đúng nhất)</div>
+        </div>
+    </div>
+    <div class="content" style="margin-top: 50px">
+        <div>
+            <ul class="list-group" style="align-items: center;">
+                <li class="list-group-item option">
+                    <div class="form-check">
+                        <label class="form-check-label choose-option">
+                            <input  type="radio" class="form-check-input" name="optradio">I am a cup
+                        </label>
+                    </div>
+                </li>
+                <li class="list-group-item option">
+                    <div class="form-check">
+                        <label class="form-check-label choose-option">
+                            <input type="radio" class="form-check-input" name="optradio">I am a cup
+                        </label>
+                    </div>
+                </li>
+                <li class="list-group-item option">
+                    <div class="form-check">
+                        <label class="form-check-label choose-option">
+                            <input type="radio" class="form-check-input" name="optradio">I am a cup
+                        </label>
+                    </div>
+                </li>
+                <li class="list-group-item option">
+                    <div class="form-check">
+                        <label class="form-check-label choose-option">
+                            <input type="radio" class="form-check-input" name="optradio">I am a cup
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="padding-top:20px; padding-left: 20px">
+        <img src="./resource/image/teacher.png" alt="teacher-logo" class="icon-teacher">
+    </div>
+
+    <div id="test-p" class="progress progress-wrapper">
+        <div id="test-p-bar" class="progress-bar progress-proceed"></div>
+        <span id="test-p-tooltip-box" class="tooltip-box">
+            <div id="test-p-tooltip" class="tooltip-text rounded-circle">15/20</div>
+        </span>
+    </div>
+
+    <div class="content">
+        <div class="text-center">
+            <button type="button" class="btn" id="btn-previous"> <i class="fas fa-arrow-left arrow"></i>
+                Previous</button>
+            <button type="button" class="btn" id="btn-next" onclick=nextPage()>Next <i
+                    class="fas fa-arrow-right arrow"></i></button>
+        </div>
+    </div>
+
+    <script>
+        function renderProgressBar(percentage) {
+            $("#test-p-bar").css("width", percentage + "%");
+
+            var progressWidth = $("#test-p").width();
+            var tooltipWidth = $("#test-p-tooltip-box").width();
+            var tooltipMargin = progressWidth / 100 * percentage - tooltipWidth / 2;
+
+            if (tooltipMargin < 0) {
+                tooltipMargin = 0;
+            } else if (tooltipMargin + tooltipWidth >= progressWidth) {
+                tooltipMargin -= tooltipWidth / 2;
+            }
+
+            $("#test-p-tooltip-box").css("margin-left", tooltipMargin + "px");
+        }
+
+        renderProgressBar((15 / 20) * 100);
+
+
+
+        var start = new Date().getTime();
+        var timeContext;
+        var hours;
+        var minutes;
+        var seconds;
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = now - start;
+            hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            var hourText = hours;
+            var minText = minutes;
+            var secText = seconds;
+            if (hours < 10) hourText = "0" + hours;
+            if (minutes < 10) minText = "0" + minutes;
+            if (seconds < 10) secText = "0" + seconds;
+            timeContext = hourText + " : " + minText + " : " + secText;
+            document.getElementById("timer").textContent = timeContext;
+        }, 1000);
+
+        function nextPage() {
+            location.href = "result.html?h=" + hours + "&m=" + minutes + "&s=" + seconds;
+        };
+    </script>
+</body>
+
+</html>

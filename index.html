@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./resource/css/circle.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+        .header {
+            font-size: 13px;
+            color: yellow;
+            width: 100%;
+            background-color: black;
+        }
+        
+        .contact {
+            float: left;
+        }
+        
+        .info {
+            float: right;
+        }
+        
+        container {
+            margin: auto;
+        }
+        
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .branch ul {
+            columns: 2;
+        }
+        
+        .btn-page {
+            margin-top: 15px;
+            font-weight: bold;
+            background-color: #252525;
+            color: #AAAAAA;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-width: 0px;
+        }
+        
+        .btn-page.chosen {
+            border-width: 2px;
+            color: #DBAC69;
+            border-color: #DBAC69;
+        }
+        
+        tr:hover {
+            border-color: #E5E5E5;
+        }
+        
+        tr {
+            display: block;
+            border-style: solid;
+            border-color: white;
+            margin-top: 2px;
+        }
+        
+        td {
+            padding: 5px 10px 10px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="background-color: black; width: 100%; padding: 5px auto 5px auto">
+            <div class="container header-info" style="display: block">
+                <div style="float: left">
+                    <i class="fas fa-phone-volume"></i> Hotline: 1800 6086
+                </div>
+                <div style="float: right">
+                    <span><img style="width: 26px; height: 14px;" src="./resource/image/vietnam-flag.png" alt="vietnam"></span>
+                    <span>Ngôn ngữ</span>
+                    <span style="display:inline-block; width: 1px;"></span>
+                    <span style="display:inline-block; width: 1cm;"><i class="fas fa-globe-asia"></i></span>
+                    <span style="display:inline-block; width: 2cm;">HuyNV</span>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+
+        <nav class="nav" style="background-color: #252525; width: 100%">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="./resource/image/native-gen5.png" alt="">
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2">
+                        <button class="btn-page chosen">
+                            Học với cô Kim
+                        </button>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn-page">
+                            Luyện tập với AI
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <div class="container" style="padding-top:20px">
+        <div class="row">
+            <div class="col-md-3" data-toggle="modal" data-target="#exampleModal">
+                <div class="card mb-3" style="padding-top: 15px">
+                    <div class="container">
+                        <img src="./resource/image/product-1.PNG" alt="daily-routine" style="margin-bottom: 10px">
+                        <h6>Unit 1: Daily Routine</h6>
+                        <p class="font-topic-des">Automatically collect metrics and visualize EC2 resource utilization
+                        </p>
+                        <br>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class=" btn-block btn-study">
+                            <div style="color: #dbac69">
+                                <div id="study">
+                                    Học ngay <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 580px">
+                        <div class="modal-content">
+
+                            <!-- header -->
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <table>
+                                    <tr onclick=questionPage()>
+                                        <td style="width: 80px">
+                                            <div class="clearfix">
+                                                <div class="c100 p100 small green" style="font-size: 40px;">
+                                                    <span style="color: black;">100%</span>
+                                                    <div class="slice">
+                                                        <div class="bar"></div>
+                                                        <div class="fill"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="width: 650px">
+                                            <div style="font-weight: bold;">What was the last movie you saw? How was it?
+                                            </div>
+                                            <div>Chào quý khách</div>
+                                        </td>
+                                        <td style="color: #DBAC69; width: 100px; text-align: center">
+                                            <div><i class="fas fa-arrow-right" style="font-size: 10px; font-weight: bold"></i></div>
+                                        </td>
+                                    </tr>
+                                    <tr onclick=questionPage()>
+                                        <td style="width: 80px">
+                                            <div class="clearfix">
+                                                <div class="c100 p50 small green" style="font-size: 40px;">
+                                                    <span style="color: black;">50%</span>
+                                                    <div class="slice">
+                                                        <div class="bar"></div>
+                                                        <div class="fill"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="width: 650px">
+                                            <div style="font-weight: bold;">Besides English, what are you currently learning?
+                                            </div>
+                                            <div>Đặt món</div>
+                                        </td>
+                                        <td style="color: #DBAC69; width: 100px; text-align: center">
+                                            <div><i class="fas fa-arrow-right" style="font-size: 10px; font-weight: bold"></i></div>
+                                        </td>
+                                    </tr>
+                                    <tr onclick=questionPage()>
+                                        <td style="width: 80px">
+                                            <div class="clearfix">
+                                                <div class="c100 p0 small green" style="font-size: 40px;">
+                                                    <span style="color: black;">0%</span>
+                                                    <div class="slice">
+                                                        <div class="bar"></div>
+                                                        <div class="fill"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="width: 650px">
+                                            <div style="font-weight: bold;">How often do you watch TV?</div>
+                                            <div>Phàn nàn về đồ ăn</div>
+                                        </td>
+                                        <td style="color: #DBAC69; width: 100px; text-align: center">
+                                            <div><i class="fas fa-arrow-right" style="font-size: 10px; font-weight: bold"></i></div>
+                                        </td>
+                                    </tr>
+                                    <tr onclick=questionPage()>
+                                        <td style="width: 80px">
+                                            <div class="clearfix">
+                                                <div class="c100 p0 small green" style="font-size: 40px;">
+                                                    <span style="color: black;">0%</span>
+                                                    <div class="slice">
+                                                        <div class="bar"></div>
+                                                        <div class="fill"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td style="width: 650px">
+                                            <div style="font-weight: bold;">How do you deal with your problems?</div>
+                                            <div>Thanh toán</div>
+                                        </td>
+                                        <td style="color: #DBAC69; width: 100px; text-align: center">
+                                            <div><i class="fas fa-arrow-right" style="font-size: 10px; font-weight: bold"></i></div>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3" data-toggle="modal" data-target="#exampleModal">
+                <div class="card mb-3" style="padding-top: 15px">
+                    <div class="container">
+                        <img src="./resource/image/product-2.PNG" alt="restaurant" style="margin-bottom: 10px">
+                        <h6>Unit 2 : Restaurant</h6>
+                        <p class="font-topic-des">Automatically collect metrics and visualize EC2 resource utilization
+                        </p>
+                        <br>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class=" btn-block btn-study">
+                            <div style="color: #dbac69">
+                                <div id="study">
+                                    Học ngay <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3" data-toggle="modal" data-target="#exampleModal">
+                <div class="card mb-3" style="padding-top: 15px">
+                    <div class="container">
+                        <img src="./resource/image/product-3.PNG" alt="accommodation" style="margin-bottom: 10px">
+                        <h6>Unit 3: Accommodation</h6>
+                        <p class="font-topic-des">Automatically collect metrics and visualize EC2 resource utilization
+                        </p>
+                        <br>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class=" btn-block btn-study">
+                            <div style="color: #dbac69">
+                                <div id="study">
+                                    Học ngay <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-3" data-toggle="modal" data-target="#exampleModal">
+                <div class="card mb-3" style="padding-top: 15px">
+                    <div class="container">
+                        <img src="./resource/image/product-4.PNG" alt="office" style="margin-bottom: 10px">
+                        <h6>Unit 4: Office</h6>
+                        <p class="font-topic-des">Automatically collect metrics and visualize EC2 resource utilization
+                        </p>
+                        <br>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class=" btn-block btn-study">
+                            <div style="color: #dbac69">
+                                <div id="study">
+                                    Học ngay <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3" data-toggle="modal" data-target="#exampleModal">
+                <div class="card mb-3" style="padding-top: 15px">
+                    <div class="container">
+                        <img src="./resource/image/product-5.PNG" alt="computers" style="margin-bottom: 10px">
+                        <h6>Unit 5: Computers</h6>
+                        <p class="font-topic-des">Automatically collect metrics and visualize EC2 resource utilization
+                        </p>
+                        <br>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class=" btn-block btn-study">
+                            <div style="color: #dbac69">
+                                <div id="study">
+                                    Học ngay <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-3" data-toggle="modal" data-target="#exampleModal">
+                <div class="card mb-3" style="padding-top: 15px">
+                    <div class="container">
+                        <img src="./resource/image/product-6.PNG" alt="volunteers" style="margin-bottom: 10px">
+                        <h6>Unit 6: Volunteers</h6>
+                        <p class="font-topic-des">Automatically collect metrics and visualize EC2 resource utilization
+                        </p>
+                        <br>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class=" btn-block btn-study">
+                            <div style="color: #dbac69">
+                                <div id="study">
+                                    Học ngay <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-3" data-toggle="modal" data-target="#exampleModal">
+                <div class="card mb-3" style="padding-top: 15px">
+                    <div class="container">
+                        <img src="./resource/image/product-7.PNG" alt="movies" style="margin-bottom: 10px">
+                        <h6>Unit 7: Movies</h6>
+                        <p class="font-topic-des">Automatically collect metrics and visualize EC2 resource utilization
+                        </p>
+                        <br>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class=" btn-block btn-study">
+                            <div style="color: #dbac69">
+                                <div id="study">
+                                    Học ngay <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-3" data-toggle="modal" data-target="#exampleModal">
+                <div class="card mb-3" style="padding-top: 15px">
+                    <div class="container">
+                        <img src="./resource/image/product-8.PNG" alt="transportation" style="margin-bottom: 10px">
+                        <h6>Unit 8: Transportation</h6>
+                        <p class="font-topic-des">Automatically collect metrics and visualize EC2 resource utilization
+                        </p>
+                        <br>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="button" class=" btn-block btn-study">
+                            <div style="color: #dbac69">
+                                <div id="study">
+                                    Học ngay <i class="fas fa-arrow-right" style="font-size: 10px"></i>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div style="background-color: black; width: 100%; ">
+            <div class="container footer-info " style="padding: 15px 0px 0px 0px ">
+                <div class="row ">
+                    <div class="col-md-2 "><img src="./resource/image/topica-logo.png " alt=" "></div>
+                    <div class="col-md-5 ">
+                        <div>TOPICA là đơn vị đào tạo trực tuyến hàng đầu Đông Nam Á </div>
+                        <div>Tiên phong dẫn đầu công nghệ giáo dục trực tuyến ở Đông Nam Á </div>
+                        <div>Copyright © 2017 topica.edu.vn. All Rights Reserved </div>
+                    </div>
+                    <div class="col-md-3 branch ">
+                        <ul class="ul-info ">
+                            <li> Hà Nội</li>
+                            <li> Đà Nẵng</li>
+                            <li> Hồ Chí Minh</li>
+                            <li> Manila</li>
+                            <li> Singapore</li>
+                            <li> Bangkok</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2 ">
+                        <ul style="list-style: none; ">
+                            <li>
+                                <i class="fab fa-youtube "></i> Youtube
+                            </li>
+                            <li>
+                                <i class="fab fa-facebook-square "></i> Facebook
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        function questionPage() {
+            location.href = "lesson.html"
+        };
+    </script>
+</body>
+
+</html>
